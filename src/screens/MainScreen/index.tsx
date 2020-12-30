@@ -6,6 +6,7 @@ import { TextComponent } from "../../components/TextComponent";
 import { ContainerComponent } from '../../components/ContainerComponent/index';
 import { HeaderComponent } from "../../components/HeaderComponent";
 import { ImageComponent } from "../../components/ImageComponent";
+import { getCurrentLocation } from "../../utils/LocationUtil";
 
 import { getWeatherRequest } from '../../redux/actions/weatherAction';
 
@@ -20,16 +21,21 @@ interface Props {
 
 class MainScreen extends Component<Props> {
     componentDidMount() {
-        this.props.getWeatherRequest({
-            q: 'Pasig',
-            lat: '0',
-            lon: '0',
-            units: 'metric'
+        this.getWeather();
+    }
+
+    getWeather() {
+        getCurrentLocation().then((location: any) => {
+            this.props.getWeatherRequest({
+                lat: location.latitude,
+                lon: location.longitude,
+                units: 'metric'
+            });
         });
     }
 
     getWeatherIcon = (iconName: string) => {
-        return `http://openweathermap.org/img/wn/${iconName}@4x.png`
+        return `http://openweathermap.org/img/wn/${iconName}@4x.png`;
     }
 
     render() {

@@ -2,15 +2,19 @@ require_relative '../node_modules/react-native/scripts/react_native_pods'
 require_relative '../node_modules/@react-native-community/cli-platform-ios/native_modules'
 
 platform :ios, '10.0'
-
+  
 target 'WeatherAppProject' do
+
+pod 'FlipperKit/SKIOSNetworkPlugin', '~> 0.54.0' 
   config = use_native_modules!
 
   use_react_native!(:path => config["reactNativePath"])
 
+
   target 'WeatherAppProjectTests' do
     inherit! :complete
     # Pods for testing
+
   end
 
   # Enables Flipper.
@@ -31,3 +35,4 @@ target 'WeatherAppProject-tvOS' do
     # Pods for testing
   end
 end
+  

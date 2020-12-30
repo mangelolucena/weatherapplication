@@ -1,9 +1,7 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
-import { Text, View } from 'react-native'
-import ScreenA from '../screens/ScreenA/index';
-import ScreenB from '../screens/ScreenB/index';
+import MainScreen from '../screens/MainScreen/index'
 
 const Stack = createStackNavigator();
 
@@ -11,18 +9,11 @@ function RootStack() {
   return (
     <NavigationContainer>
       <Stack.Navigator
-        initialRouteName="ScreenA"
-        screenOptions={{ gestureEnabled: false }}>
+        initialRouteName='MainScreen'
+        screenOptions={{ gestureEnabled: false, headerShown: false }}>
         <Stack.Screen
-          name="ScreenA"
-          component={ScreenA}
-          options={{ title: 'My app' }}
-        />
-        <Stack.Screen
-          name="ScreenB"
-          component={ScreenB}
-          initialParams={{ user: 'me' }}
-        />
+          name='MainScreen'
+          component={MainScreen} />
       </Stack.Navigator>
     </NavigationContainer>
   );

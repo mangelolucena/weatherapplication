@@ -9,12 +9,11 @@ function RootStack() {
   return (
     <NavigationContainer>
       <Stack.Navigator
-        initialRouteName="MainScreen"
-        screenOptions={{ gestureEnabled: false }}>
+        initialRouteName='MainScreen'
+        screenOptions={{ gestureEnabled: false, headerShown: false }}>
         <Stack.Screen
-          name="MainScreen"
-          component={MainScreen}
-          options={{ title: 'My app' }} />
+          name='MainScreen'
+          component={MainScreen} />
       </Stack.Navigator>
     </NavigationContainer>
   );

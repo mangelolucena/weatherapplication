@@ -11,9 +11,7 @@ export default class AppComponent extends React.Component {
   public render() {
     return (
       <Provider store={store}>
-        <SafeAreaView style={{ flex: 1 }}>
-          <RootStack />
-        </SafeAreaView>
+        <RootStack />
       </Provider>
     );
   }

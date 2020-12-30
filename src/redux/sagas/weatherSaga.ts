@@ -9,9 +9,9 @@ export function* watcherSaga() {
 }
 
 // worker saga: makes the api call when watcher saga sees the action
-function* workerSaga() {
+function* workerSaga(action: { type: string, payload: {} }) {
     try {
-        const response = yield call(WeatherService.getWeather);
+        const response = yield call(WeatherService.getWeather, action.payload);
         // dispatch a success action to the store
         yield put(getWeatherSuccess(response.data));
     } catch (error) {

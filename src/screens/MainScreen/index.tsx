@@ -1,37 +1,59 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
+import { View } from "react-native";
+
+import { TextComponent } from "../../components/TextComponent";
+import { ContainerComponent } from '../../components/ContainerComponent/index';
+import { HeaderComponent } from "../../components/HeaderComponent";
+import { ImageComponent } from "../../components/ImageComponent";
 
 import { getWeatherRequest } from '../../redux/actions/weatherAction';
 
-import { View, Button, Text } from "react-native";
+import AppStyles from "../../themes/AppStyles";
 
 interface Props {
     getWeatherRequest: any;
     loading: boolean;
-    weather: Object;
-    error: Object;
+    weather: any;
+    error: any;
 }
 
 class MainScreen extends Component<Props> {
-    public componentDidMount() {
-        this.props.getWeatherRequest();
+    componentDidMount() {
+        this.props.getWeatherRequest({
+            q: 'Pasig',
+            lat: '0',
+            lon: '0',
+            units: 'metric'
+        });
     }
+
+    getWeatherIcon = (iconName: string) => {
+        return `http://openweathermap.org/img/wn/${iconName}@4x.png`
+    }
+
     render() {
         const { loading, weather, getWeatherRequest, error } = this.props;
-
+        console.log(weather);
         return (
-            <View>
-                <Button title='asd' onPress={() => console.log(weather)} />
+            <ContainerComponent>
+                <HeaderComponent />
                 {
-                    loading ? <Text>Loading</Text> : null
+                    weather ?
+                        <View style={AppStyles.alignItemsCenter}>
+                            <ImageComponent source={{ uri: this.getWeatherIcon(weather.weather[0].icon) }} />
+                            <TextComponent>{`${weather.main.temp} °C`}</TextComponent>
+                            <TextComponent>{weather.weather[0].main}</TextComponent>
+                            <TextComponent>{weather.weather[0].description}</TextComponent>
+                        </View> : null
                 }
-            </View>
+            </ContainerComponent>
         );
     }
 }
 
 const mapStateToProps = (state: any) => ({
-    loading: state.weatherReducer.fetching,
+    loading: state.weatherReducer.loading,
     weather: state.weatherReducer.weather,
     error: state.weatherReducer.error
 })

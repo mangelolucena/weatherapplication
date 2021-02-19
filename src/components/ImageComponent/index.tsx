@@ -5,5 +5,5 @@ export const ImageComponent: FunctionComponent<ImageProps> = (props) => (
     <Image
         resizeMode='contain'
         {...props}
-        style={[{ height: 200, width: 200 }, props.style]} />
+        style={[{ height: 150, width: 150 }, props.style]} />
 );

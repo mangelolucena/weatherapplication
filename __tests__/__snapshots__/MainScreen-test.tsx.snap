@@ -1,0 +1,676 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<RCTSafeAreaView
+  emulateUnlessSupported={true}
+  style={
+    Array [
+      Object {
+        "flex": 1,
+      },
+      undefined,
+    ]
+  }
+>
+  <BVLinearGradient
+    colors={
+      Array [
+        4278236891,
+        4287745990,
+        4292342511,
+      ]
+    }
+    endPoint={
+      Object {
+        "x": 0.5,
+        "y": 1,
+      }
+    }
+    locations={
+      Array [
+        0.5,
+        0.7,
+        0.9,
+      ]
+    }
+    startPoint={
+      Object {
+        "x": 0.5,
+        "y": 0,
+      }
+    }
+    style={
+      Object {
+        "flex": 1,
+        "padding": 20,
+      }
+    }
+  >
+    <View
+      style={
+        Object {
+          "flex": 1,
+        }
+      }
+    >
+      <View
+        style={
+          Array [
+            Object {
+              "backgroundColor": "white",
+              "borderRadius": 8,
+              "elevation": 5,
+              "shadowColor": "gray",
+              "shadowOffset": Object {
+                "height": 2,
+                "width": 0,
+              },
+              "shadowOpacity": 0.25,
+              "shadowRadius": 3.84,
+            },
+            Object {
+              "alignItems": "center",
+              "flex": 1,
+            },
+          ]
+        }
+      >
+        <View
+          style={
+            Object {
+              "flex": 1,
+              "flexDirection": "row",
+              "justifyContent": "center",
+            }
+          }
+        >
+          <View>
+            <View
+              style={
+                Object {
+                  "flex": 1,
+                  "justifyContent": "center",
+                }
+              }
+            >
+              <View
+                accessibilityIgnoresInvertColors={true}
+                style={
+                  Object {
+                    "backgroundColor": "transparent",
+                    "overflow": "hidden",
+                    "position": "relative",
+                  }
+                }
+              >
+                <Image
+                  onLoad={[Function]}
+                  resizeMode="contain"
+                  source={
+                    Object {
+                      "uri": "http://openweathermap.org/img/wn/04d@4x.png",
+                    }
+                  }
+                  style={
+                    Object {
+                      "bottom": 0,
+                      "height": 150,
+                      "left": 0,
+                      "position": "absolute",
+                      "right": 0,
+                      "top": 0,
+                      "width": 150,
+                    }
+                  }
+                  testID="RNE__Image"
+                  theme={
+                    Object {
+                      "colors": Object {
+                        "black": "#242424",
+                        "disabled": "hsl(208, 8%, 90%)",
+                        "divider": "#bcbbc1",
+                        "error": "#ff190c",
+                        "grey0": "#393e42",
+                        "grey1": "#43484d",
+                        "grey2": "#5e6977",
+                        "grey3": "#86939e",
+                        "grey4": "#bdc6cf",
+                        "grey5": "#e1e8ee",
+                        "greyOutline": "#bbb",
+                        "platform": Object {
+                          "android": Object {
+                            "error": "#f44336",
+                            "grey": "rgba(0, 0, 0, 0.54)",
+                            "primary": "#2196f3",
+                            "secondary": "#9C27B0",
+                            "success": "#4caf50",
+                            "warning": "#ffeb3b",
+                          },
+                          "ios": Object {
+                            "error": "#ff3b30",
+                            "grey": "#7d7d7d",
+                            "primary": "#007aff",
+                            "searchBg": "#dcdce1",
+                            "secondary": "#5856d6",
+                            "success": "#4cd964",
+                            "warning": "#ffcc00",
+                          },
+                          "web": Object {
+                            "error": "#ff190c",
+                            "grey": "#393e42",
+                            "primary": "#2089dc",
+                            "searchBg": "#303337",
+                            "secondary": "#ca71eb",
+                            "success": "#52c41a",
+                            "warning": "#faad14",
+                          },
+                        },
+                        "primary": "#2089dc",
+                        "searchBg": "#303337",
+                        "secondary": "#ca71eb",
+                        "success": "#52c41a",
+                        "warning": "#faad14",
+                        "white": "#ffffff",
+                      },
+                    }
+                  }
+                  transition={true}
+                  transitionDuration={360}
+                />
+                <View
+                  accessibilityElementsHidden={true}
+                  importantForAccessibility="no-hide-descendants"
+                  pointerEvents="none"
+                  style={
+                    Object {
+                      "bottom": 0,
+                      "left": 0,
+                      "opacity": 1,
+                      "position": "absolute",
+                      "right": 0,
+                      "top": 0,
+                    }
+                  }
+                >
+                  <View
+                    style={
+                      Object {
+                        "alignItems": "center",
+                        "backgroundColor": "#bdbdbd",
+                        "height": 150,
+                        "justifyContent": "center",
+                        "width": 150,
+                      }
+                    }
+                    testID="RNE__Image__placeholder"
+                  />
+                </View>
+                <View
+                  style={
+                    Array [
+                      Object {
+                        "height": 150,
+                        "width": 150,
+                      },
+                      undefined,
+                    ]
+                  }
+                />
+              </View>
+            </View>
+          </View>
+          <View
+            style={
+              Object {
+                "alignItems": "center",
+                "flex": 1,
+                "justifyContent": "center",
+              }
+            }
+          >
+            <Text
+              bold={true}
+              style={
+                Object {
+                  "color": "#242424",
+                  "fontSize": 25,
+                  "fontWeight": "bold",
+                }
+              }
+            >
+              Clouds
+            </Text>
+            <Text
+              bold={true}
+              fontSize={40}
+              style={
+                Object {
+                  "color": "#242424",
+                  "fontSize": 40,
+                  "fontWeight": "bold",
+                }
+              }
+            >
+              303.2 °C
+            </Text>
+            <Text
+              style={
+                Object {
+                  "color": "#242424",
+                  "fontSize": 15,
+                  "fontWeight": "normal",
+                }
+              }
+            >
+              304.26 °C | 302.15 °C
+            </Text>
+          </View>
+        </View>
+        <Text
+          style={
+            Object {
+              "color": "#242424",
+              "fontSize": 15,
+              "fontWeight": "normal",
+              "marginTop": 10,
+              "position": "absolute",
+            }
+          }
+        >
+          January 3, 8:20 pm
+        </Text>
+      </View>
+      <View>
+        <RCTScrollView>
+          <View>
+            <View
+              style={
+                Array [
+                  Object {
+                    "backgroundColor": "white",
+                    "borderRadius": 8,
+                    "elevation": 5,
+                    "shadowColor": "gray",
+                    "shadowOffset": Object {
+                      "height": 2,
+                      "width": 0,
+                    },
+                    "shadowOpacity": 0.25,
+                    "shadowRadius": 3.84,
+                  },
+                  Object {
+                    "alignItems": "center",
+                    "flexDirection": "row",
+                    "marginTop": 8,
+                    "padding": 20,
+                  },
+                ]
+              }
+            >
+              <Text
+                bold={true}
+                style={
+                  Object {
+                    "color": "#242424",
+                    "fontSize": 15,
+                    "fontWeight": "bold",
+                  }
+                }
+              >
+                Description: 
+              </Text>
+              <Text
+                style={
+                  Object {
+                    "color": "#242424",
+                    "fontSize": 15,
+                    "fontWeight": "normal",
+                  }
+                }
+              >
+                broken clouds
+              </Text>
+            </View>
+            <View
+              style={
+                Array [
+                  Object {
+                    "backgroundColor": "white",
+                    "borderRadius": 8,
+                    "elevation": 5,
+                    "shadowColor": "gray",
+                    "shadowOffset": Object {
+                      "height": 2,
+                      "width": 0,
+                    },
+                    "shadowOpacity": 0.25,
+                    "shadowRadius": 3.84,
+                  },
+                  Object {
+                    "alignItems": "center",
+                    "flexDirection": "row",
+                    "marginTop": 8,
+                    "padding": 20,
+                  },
+                ]
+              }
+            >
+              <Text
+                bold={true}
+                style={
+                  Object {
+                    "color": "#242424",
+                    "fontSize": 15,
+                    "fontWeight": "bold",
+                  }
+                }
+              >
+                Feels like: 
+              </Text>
+              <Text
+                style={
+                  Object {
+                    "color": "#242424",
+                    "fontSize": 15,
+                    "fontWeight": "normal",
+                  }
+                }
+              >
+                306.06 °C
+              </Text>
+            </View>
+            <View
+              style={
+                Array [
+                  Object {
+                    "backgroundColor": "white",
+                    "borderRadius": 8,
+                    "elevation": 5,
+                    "shadowColor": "gray",
+                    "shadowOffset": Object {
+                      "height": 2,
+                      "width": 0,
+                    },
+                    "shadowOpacity": 0.25,
+                    "shadowRadius": 3.84,
+                  },
+                  Object {
+                    "alignItems": "center",
+                    "flexDirection": "row",
+                    "marginTop": 8,
+                    "padding": 20,
+                  },
+                ]
+              }
+            >
+              <Text
+                bold={true}
+                style={
+                  Object {
+                    "color": "#242424",
+                    "fontSize": 15,
+                    "fontWeight": "bold",
+                  }
+                }
+              >
+                Humidity: 
+              </Text>
+              <Text
+                style={
+                  Object {
+                    "color": "#242424",
+                    "fontSize": 15,
+                    "fontWeight": "normal",
+                  }
+                }
+              >
+                62 %
+              </Text>
+            </View>
+            <View
+              style={
+                Array [
+                  Object {
+                    "backgroundColor": "white",
+                    "borderRadius": 8,
+                    "elevation": 5,
+                    "shadowColor": "gray",
+                    "shadowOffset": Object {
+                      "height": 2,
+                      "width": 0,
+                    },
+                    "shadowOpacity": 0.25,
+                    "shadowRadius": 3.84,
+                  },
+                  Object {
+                    "alignItems": "center",
+                    "flexDirection": "row",
+                    "marginTop": 8,
+                    "padding": 20,
+                  },
+                ]
+              }
+            >
+              <Text
+                bold={true}
+                style={
+                  Object {
+                    "color": "#242424",
+                    "fontSize": 15,
+                    "fontWeight": "bold",
+                  }
+                }
+              >
+                Pressure: 
+              </Text>
+              <Text
+                style={
+                  Object {
+                    "color": "#242424",
+                    "fontSize": 15,
+                    "fontWeight": "normal",
+                  }
+                }
+              >
+                1011 hPa
+              </Text>
+            </View>
+            <View
+              style={
+                Array [
+                  Object {
+                    "backgroundColor": "white",
+                    "borderRadius": 8,
+                    "elevation": 5,
+                    "shadowColor": "gray",
+                    "shadowOffset": Object {
+                      "height": 2,
+                      "width": 0,
+                    },
+                    "shadowOpacity": 0.25,
+                    "shadowRadius": 3.84,
+                  },
+                  Object {
+                    "alignItems": "center",
+                    "flexDirection": "row",
+                    "marginTop": 8,
+                    "padding": 20,
+                  },
+                ]
+              }
+            >
+              <Text
+                bold={true}
+                style={
+                  Object {
+                    "color": "#242424",
+                    "fontSize": 15,
+                    "fontWeight": "bold",
+                  }
+                }
+              >
+                Clouds: 
+              </Text>
+              <Text
+                style={
+                  Object {
+                    "color": "#242424",
+                    "fontSize": 15,
+                    "fontWeight": "normal",
+                  }
+                }
+              >
+                75 %
+              </Text>
+            </View>
+            <View
+              style={
+                Array [
+                  Object {
+                    "backgroundColor": "white",
+                    "borderRadius": 8,
+                    "elevation": 5,
+                    "shadowColor": "gray",
+                    "shadowOffset": Object {
+                      "height": 2,
+                      "width": 0,
+                    },
+                    "shadowOpacity": 0.25,
+                    "shadowRadius": 3.84,
+                  },
+                  Object {
+                    "alignItems": "center",
+                    "flexDirection": "row",
+                    "marginTop": 8,
+                    "padding": 20,
+                  },
+                ]
+              }
+            >
+              <Text
+                bold={true}
+                style={
+                  Object {
+                    "color": "#242424",
+                    "fontSize": 15,
+                    "fontWeight": "bold",
+                  }
+                }
+              >
+                Wind: 
+              </Text>
+              <Text
+                style={
+                  Object {
+                    "color": "#242424",
+                    "fontSize": 15,
+                    "fontWeight": "normal",
+                  }
+                }
+              >
+                2.6 meter/sec
+              </Text>
+            </View>
+            <View
+              style={
+                Array [
+                  Object {
+                    "backgroundColor": "white",
+                    "borderRadius": 8,
+                    "elevation": 5,
+                    "shadowColor": "gray",
+                    "shadowOffset": Object {
+                      "height": 2,
+                      "width": 0,
+                    },
+                    "shadowOpacity": 0.25,
+                    "shadowRadius": 3.84,
+                  },
+                  Object {
+                    "alignItems": "center",
+                    "flexDirection": "row",
+                    "marginTop": 8,
+                    "padding": 20,
+                  },
+                ]
+              }
+            >
+              <Text
+                bold={true}
+                style={
+                  Object {
+                    "color": "#242424",
+                    "fontSize": 15,
+                    "fontWeight": "bold",
+                  }
+                }
+              >
+                Sunrise: 
+              </Text>
+              <Text
+                style={
+                  Object {
+                    "color": "#242424",
+                    "fontSize": 15,
+                    "fontWeight": "normal",
+                  }
+                }
+              >
+                6:21 am
+              </Text>
+            </View>
+            <View
+              style={
+                Array [
+                  Object {
+                    "backgroundColor": "white",
+                    "borderRadius": 8,
+                    "elevation": 5,
+                    "shadowColor": "gray",
+                    "shadowOffset": Object {
+                      "height": 2,
+                      "width": 0,
+                    },
+                    "shadowOpacity": 0.25,
+                    "shadowRadius": 3.84,
+                  },
+                  Object {
+                    "alignItems": "center",
+                    "flexDirection": "row",
+                    "marginTop": 8,
+                    "padding": 20,
+                  },
+                ]
+              }
+            >
+              <Text
+                bold={true}
+                style={
+                  Object {
+                    "color": "#242424",
+                    "fontSize": 15,
+                    "fontWeight": "bold",
+                  }
+                }
+              >
+                Sunset: 
+              </Text>
+              <Text
+                style={
+                  Object {
+                    "color": "#242424",
+                    "fontSize": 15,
+                    "fontWeight": "normal",
+                  }
+                }
+              >
+                5:37 pm
+              </Text>
+            </View>
+          </View>
+        </RCTScrollView>
+      </View>
+    </View>
+  </BVLinearGradient>
+</RCTSafeAreaView>
+`;

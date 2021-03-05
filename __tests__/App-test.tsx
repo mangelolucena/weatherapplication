@@ -10,9 +10,26 @@ import App from '../App';
 import renderer, { act } from 'react-test-renderer';
 
 
-it('renders correctly', async () => {
+// ui test
+// jest.useFakeTimers()
+jest.mock('react-native/Libraries/Animated/src/NativeAnimatedHelper');
+test('renders App Screen', async () => {
   await act(async () => {
     const tree = renderer.create(<App />).toJSON();
     expect(tree).toMatchSnapshot();
   })
 });
+
+// unit test sample
+import { addNumbers } from '../src/utils/mathUtils';
+import { track } from '../src/utils/analyticsUtils'
+
+jest.mock('../src/utils/analyticsUtils');
+test('something', () => {
+  expect('something')
+})
+
+test('add numbers', () => {
+  expect(addNumbers(1, 2)).toEqual(3);
+  expect(track).toBeCalledWith('addNumbers');
+})

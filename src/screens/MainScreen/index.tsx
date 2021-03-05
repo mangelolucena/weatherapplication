@@ -1,6 +1,6 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { View, ScrollView } from "react-native";
+import { View, ScrollView, Button } from "react-native";
 import { map } from 'lodash';
 import moment from 'moment'
 
@@ -66,7 +66,14 @@ function renderWeatherDetails(weather: any) {
 
 export default function MainScreen() {
   const dispatch = useDispatch();
-  const state = useSelector(state => state.weatherReducer)
+  const state = useSelector((state: any) => state.weatherReducer)
+  const [sampleStatus, setSampleStatus] = useState('');
+
+  useEffect(() => {
+    setTimeout(() => {
+      setSampleStatus('timeout is called')
+    }, 1000)
+  }, [])
 
   useEffect(() => {
     // getCurrentLocation().then((location: any) => {
@@ -83,12 +90,15 @@ export default function MainScreen() {
   }, [state.weather]);
   return (
     <ContainerComponent>
+      <Button testID='myButton' title='Sample' onPress={() => setSampleStatus('press')} />
+      <TextExtraLarge testID='myText'>{sampleStatus}</TextExtraLarge>
       {
         state.weather ?
           <View style={styles.container}>
             <CardComponent style={styles.weatherMainContainer} >
               <View style={styles.rowContainer}>
                 <View>
+
                   <View style={styles.weatherIconContainer}>
                     <ImageComponent source={{ uri: getWeatherIcon(state.weather.weather[0].icon) }} />
                   </View>

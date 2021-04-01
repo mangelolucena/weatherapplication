@@ -1,6 +1,6 @@
-import React, { FunctionComponent } from 'react';
-import { Text, TextProps } from 'react-native-elements';
+import React, {FunctionComponent} from 'react';
+import {Text as TextComponent, TextProps} from 'react-native-elements';
 
-export const TextComponent: FunctionComponent<TextProps> = (props) => (
-    <Text {...props} style={props.style} />
+export const Text: FunctionComponent<TextProps> = (props) => (
+  <TextComponent {...props} style={[{fontSize: 14}, props.style]} />
 );

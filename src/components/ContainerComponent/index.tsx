@@ -1,7 +1,8 @@
-import React, { FunctionComponent } from 'react';
-import { ViewProps, SafeAreaView } from 'react-native';
-import AppStyles from '../../themes/AppStyles';
+import React, {FunctionComponent} from 'react';
+import {ViewProps, SafeAreaView} from 'react-native';
 
-export const ContainerComponent: FunctionComponent<ViewProps> = (props) => (
-    <SafeAreaView style={[AppStyles.container, props.style]}>{props.children}</SafeAreaView>
+export const Container: FunctionComponent<ViewProps> = (props) => (
+  <SafeAreaView style={[{flex: 1, padding: 20}, props.style]}>
+    {props.children}
+  </SafeAreaView>
 );

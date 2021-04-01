@@ -1,9 +1,9 @@
 import React, { FunctionComponent } from 'react';
-import { ImageProps, Image } from 'react-native-elements';
+import { ImageProps, Image as ImageComponent } from 'react-native-elements';
 
-export const ImageComponent: FunctionComponent<ImageProps> = (props) => (
-    <Image
+export const Image: FunctionComponent<ImageProps> = (props) => (
+    <ImageComponent
         resizeMode='contain'
         {...props}
-        style={[{ height: 200, width: 200 }, props.style]} />
+        style={[{ height: 150, width: 150 }, props.style]} />
 );

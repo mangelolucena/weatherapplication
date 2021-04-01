@@ -1,12 +1,9 @@
-import React, { FunctionComponent } from "react";
-import { View, ViewProps } from "react-native";
-import { styles } from './styles';
+import React, {FunctionComponent} from 'react';
+import {Card as CardComponent, CardProps} from 'react-native-elements';
+import {styles} from './styles';
 
-export const CardComponent: FunctionComponent<ViewProps> = (props) => (
-    <View style={[styles.card, props.style]}>
-        {
-            props.children
-        }
-    </View>
-)
-
+export const Card: FunctionComponent<CardProps> = (props) => (
+  <CardComponent containerStyle={[styles.card, props.containerStyle]}>
+    {props.children}
+  </CardComponent>
+);

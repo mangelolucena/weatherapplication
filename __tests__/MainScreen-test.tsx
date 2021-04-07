@@ -9,7 +9,7 @@ import MainScreen from '../src/screens/MainScreen';
 // Note: test renderer must be required after react-native.
 import renderer from 'react-test-renderer';
 import { Provider } from 'react-redux';
-import store from '../src/redux/store';
+import store from '../src/state/store';
 
 
 // it('renders correctly', async () => {

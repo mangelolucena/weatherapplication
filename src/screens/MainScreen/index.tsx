@@ -4,11 +4,10 @@ import {View, ScrollView} from 'react-native';
 import {map} from 'lodash';
 import moment from 'moment';
 
-import {Container, Text, Image, Card} from 'components';
-
-import {getWeatherRequest} from '../../redux/actions/weatherAction';
+import {Container, Text, Image, Card, Header} from 'components';
 
 import {styles} from './styles';
+import { getWeatherRequest } from 'state/weather/weatherAction';
 
 function getWeatherIcon(iconName: string) {
   return `http://openweathermap.org/img/wn/${iconName}@4x.png`;
@@ -59,7 +58,7 @@ function renderWeatherDetails(weather: any) {
   ));
 }
 
-export default function MainScreen() {
+export default function MainScreen(props: any) {
   const dispatch = useDispatch();
   const state = useSelector((state: any) => state.weatherReducer);
 
@@ -80,6 +79,7 @@ export default function MainScreen() {
   }, [state.weather]);
   return (
     <Container>
+      <Header onMenuPress={() => props.navigation.toggleDrawer()} />
       {state.weather ? (
         <View style={styles.container}>
           <Card>
@@ -115,3 +115,5 @@ export default function MainScreen() {
     </Container>
   );
 }
+
+

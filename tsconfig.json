@@ -60,6 +60,9 @@
       "*": ["src/*"],
       "styles/*": ["styles/*"],
       "components/*":["components/*"],
+      "strings/*":["strings/*"],
+      "screens/*":["screens/*"],
+      "state/":["state/"],
       "underscore": ["lodash"]
     }
   },

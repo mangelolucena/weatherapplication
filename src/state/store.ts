@@ -1,7 +1,7 @@
 import { createStore, applyMiddleware, compose } from 'redux'
 import createSagaMiddleware from '@redux-saga/core';
-import combineReducer from '../redux/reducers/index';
-import { watcherSaga } from './sagas/weatherSaga';
+import combineReducer from './combineReducers';
+import { watcherSaga } from './weather/weatherSaga';
 
 const sagaMiddleware = createSagaMiddleware();
 

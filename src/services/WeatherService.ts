@@ -1,9 +1,7 @@
-import ApiService from './ApiService';
+import ApiService from './apiService';
 
 const getWeather = (params: any) => {
-    return ApiService.get('/weather', params);
-}
+  return ApiService.get('/weather', params);
+};
 
-const WeatherService = { getWeather }
-
-export default WeatherService;
+export {getWeather};

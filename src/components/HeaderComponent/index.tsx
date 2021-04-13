@@ -1,21 +1,16 @@
 import React, {FunctionComponent} from 'react';
-import {View} from 'react-native';
+import {Button, Icon} from 'react-native-elements';
+import {Header as HeaderComponent} from 'react-native-elements';
 
 import {Text} from '../TextComponent';
 
-
 interface Props {
   title?: string;
+  onMenuPress?: () => void;
 }
 
-export const HeaderComponent: FunctionComponent<Props> = ({title}) => (
-  <View
-    style={{
-      height: 50,
-      justifyContent: 'center'
-    }}>
-    <Text style={{fontWeight: 'bold', fontSize: 15, paddingHorizontal: 10}}>
-      {title}
-    </Text>
-  </View>
+export const Header: FunctionComponent<Props> = ({title, onMenuPress}) => (
+  <HeaderComponent
+    leftComponent={<Button onPress={onMenuPress} title="MENU" />}
+  />
 );
